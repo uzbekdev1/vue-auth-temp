@@ -33,10 +33,6 @@ namespace Demo.API
 
         public void ConfigureServices(IServiceCollection services)
         { 
-            services.AddControllers();
-
-            services.AddCors();
-
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -86,6 +82,10 @@ namespace Demo.API
                 a.SaveToken = true;
                 a.TokenValidationParameters = jwtParameters;
             });
+
+            services.AddControllers();
+
+            services.AddCors();
 
             services.AddTransient<UserService>();
         }

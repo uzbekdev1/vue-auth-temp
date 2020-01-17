@@ -230,3 +230,4 @@ _Pvt_Extensions
 # FAKE - F# Make
 .fake/
 /Demo.UI/ClientApp/node_modules
+/Demo.UI/ClientApp/dist
